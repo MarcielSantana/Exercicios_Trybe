@@ -1,4 +1,4 @@
-Neste repositório contam todas as atividades de aprendizagem já desenvolvidas e as que ainda serão praticadas por _[Marciel Santana](www.linkedin.com/in/marciel-santana-00338996)_ enquanto estudo na [Trybe](https://www.betrybe.com/) :rocket:
+Neste repositório constam todas as atividades de aprendizagem já desenvolvidas e as que ainda serão praticadas por _[Marciel Santana](www.linkedin.com/in/marciel-santana)_ enquanto estudo na [Trybe](https://www.betrybe.com/) :rocket:
 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa³ paga quando conseguir um bom trabalho."_
 
