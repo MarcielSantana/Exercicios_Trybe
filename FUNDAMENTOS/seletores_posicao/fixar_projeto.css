@@ -1,0 +1,45 @@
+div:hover {
+    border: 5px solid black;
+}
+
+
+div:nth-of-type(1) {
+  background-color: blue;
+  font-size: 30px;
+  
+}
+
+div:nth-of-type(1) > h3{
+    font-size: 30px;
+}
+
+div:nth-of-type(2){
+    background-color: red;
+    font-style: oblique;
+}
+
+div:nth-of-type(2) > h3{
+    font-style: oblique;
+    font-family: monospace;
+    color: hotpink;
+}
+
+div:nth-of-type(3){
+    background-color: gold;
+    height: 100px;
+}
+
+div:nth-of-type(4){
+    color: white;
+    background-color:black;
+}
+
+div:nth-of-type(5){
+    background-color: rgb(99, 196, 99);
+}
+
+
+/* Deixa as tags ímpares <h3> com o texto em itálico. */
+div:nth-child(odd) h3{
+    font-style: italic;
+}

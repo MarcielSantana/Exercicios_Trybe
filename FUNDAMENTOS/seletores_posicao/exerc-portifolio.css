@@ -1,0 +1,55 @@
+#navegacao ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 5px solid black;
+    height: 50px;
+    background-color: rgb(86, 173, 86);
+    font-size: 20px;
+    align-items: center;
+}
+
+#navegacao a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+.foto_marciel {
+    background-color: rgb(98, 156, 98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80%;
+}
+
+.foto_marciel img{
+    width: 200px;       
+    height: auto;        
+    max-width: 100%;
+}
+
+#habilidades{
+    margin-top: 55px;
+    background-color: aquamarine;
+}
+
+#contato{
+    margin-top: 55px;
+}
+
+
+footer{
+ 
+    background-color: green;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
