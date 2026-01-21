@@ -1,0 +1,288 @@
+/* ==========================
+   RESET E BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Paleta oceânica */
+  --oceano-profundo: #031926;
+  --oceano-escuro: #062f4f;
+  --oceano-medio: #0b6fa4;
+  --oceano-claro: #cceefc;
+  --coral: #ff7a18;
+  --areia: #f5f5f5;
+  --branco: #ffffff;
+  --texto: #1f2933;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(to bottom, var(--oceano-profundo), var(--oceano-escuro));
+  color: var(--texto);
+  line-height: 1.7;
+  animation: fadeIn 1s ease-in;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  background: radial-gradient(circle at top, var(--oceano-medio), var(--oceano-escuro));
+  color: var(--branco);
+  text-align: center;
+  padding: 50px 20px;
+  animation: slideDown 1s ease;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+
+/* ==========================
+   NAV
+========================== */
+nav {
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--oceano-escuro);
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background-color: var(--coral);
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: var(--coral);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ==========================
+   GRID PRINCIPAL
+========================== */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "nav"
+    "article"
+    "aside"
+    "footer";
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+article { grid-area: article; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+
+/* ==========================
+   ARTICLE
+========================== */
+article {
+  max-width: 1100px;
+  margin: 50px auto;
+  background-color: var(--areia);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: fadeUp 1.2s ease;
+}
+
+article h2 {
+  color: var(--oceano-escuro);
+  border-left: 6px solid var(--coral);
+  padding-left: 12px;
+  margin-bottom: 25px;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+section {
+  margin-top: 50px;
+  animation: fadeUp 1s ease forwards;
+}
+
+section h3,
+section h4,
+section h5 {
+  color: var(--oceano-medio);
+  margin-bottom: 12px;
+}
+
+/* ==========================
+   LISTAS
+========================== */
+ol, ul {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ==========================
+   IMAGENS
+========================== */
+section img {
+  display: block;
+  max-width: 100%;
+  margin: 25px auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+section img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.4);
+}
+
+/* ==========================
+   TEXTO
+========================== */
+p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+strong {
+  color: var(--coral);
+}
+
+/* ==========================
+   ASIDE
+========================== */
+aside {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  background: linear-gradient(135deg, var(--oceano-medio), var(--oceano-escuro));
+  color: var(--branco);
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  animation: fadeUp 1.2s ease;
+}
+
+aside h3 {
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background-color: var(--oceano-profundo);
+  color: var(--branco);
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  grid-area: footer;
+  margin-top: 40px;
+  grid-column: 1 / -1;
+}
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (min-width: 900px) {
+  body {
+    grid-template-columns: 3fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "article aside"
+      "footer footer";
+  }
+
+  aside {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  article {
+    padding: 25px;
+    margin: 30px 15px;
+  }
+
+  aside {
+    margin: 30px 15px;
+  }
+}
